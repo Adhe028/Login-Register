@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="bg">
+        <div class="form">
+            <div class="button">
+                <div id="btn"></div>
+                <button type="button" class="btn" onclick="Login()">Login</button>
+                <button type="button" class="btn" onclick="Register()">Register</button>
+            </div>
+            <form id="Login" class="input-grup">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="text" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class ="chech-box"><span>Remember Password</span>                
+                <button type="submit" class="btn-submit">Login</button>
+            </form>
+            <form id="Register" class="input-grup">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="E-mail" required>
+                <input type="text" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class ="chech-box"><span>I agree to the terms</span>                
+                <button type="submit" class="btn-submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var a = document.getElementById("Login");
+        var b = document.getElementById("Register");
+        var c = document.getElementById("btn");
+
+        function Register(){
+            a.style.left = "-480px";
+            b.style.left = "50px";
+            c.style.left = "110px";
+            document.title = "Register";
+        }
+        function Login(){
+            a.style.left = "50px";
+            b.style.left = "480px";
+            c.style.left = "0px";
+            document.title = "Login";
+
+        }
+    </script>
+</body>
+</html>
